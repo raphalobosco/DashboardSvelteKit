@@ -1,7 +1,8 @@
 <script>
-	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
+	import BookingList from "../components/BookingList.svelte";
+	import CreditsBox from "../components/CreditsBox.svelte";
+
+	
 </script>
 
 <svelte:head>
@@ -10,50 +11,37 @@
 </svelte:head>
 
 <section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
-		</span>
+	<h2>Hello Rapha 👋</h2>
 
-		to your new<br />SvelteKit app
-	</h1>
+            <div class="grid">
+                <CreditsBox amount={10} />
+			</div>
+          
+            <div class="bookings-list">
+                <div class="header-list">
 
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
+                    <h3 class="title">Recent Bookings </h3>
+                    <a href="/bookingspast" class="link" >view all (2) </a>
+                </div>
 
-	<Counter />
+				<BookingList/>
+
+                
+                        <!-- <BookingListPast rest={{ name: restaurant.name, photo: restaurant.photo, date: restaurant.date }} /> -->
+                    
+                
+            </div>
+
+            <div class="bookings-list">
+                <div class="header-list">
+
+                    <h3 class="title">Recent Bookings </h3>
+                    <a href="/bookingsup" class="link" >view all (2) </a>
+                </div>
+                <BookingList/>
+            </div>
 </section>
 
 <style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
-	}
-
-	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
-	}
+	
 </style>
