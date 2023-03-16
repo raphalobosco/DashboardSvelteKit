@@ -1,6 +1,9 @@
 <script>
 
-    export let amount = 0
+    /**
+	 * @type {any}
+	 */
+     export let amount;
 </script>
 
 <div class="credits-box">

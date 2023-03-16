@@ -1,10 +1,14 @@
 <script>
-	import CreditsBox from "../components/CreditsBox.svelte";
-	import UserProfile from "../components/UserProfile.svelte";
-    import usersData from "../data/data.json"
+	
+	import CreditsBox from "./CreditsBox.svelte";
+	import UserProfile from "./UserProfile.svelte";
 
-    const users = usersData.users[0]
-    const name = 'Aline'
+  /**
+	 * @type {{ users:  any; }}
+	 */
+   export let data
+
+ 
     
 
 	
@@ -13,7 +17,7 @@
 <div class="sidebar">
 
     <!-- {#each users as user} -->
-    <UserProfile name={users.name} email={users.email} photo={users.photo} />
+    <UserProfile photo={data.users.photo}/>
     <!-- {/each} -->
 
     <div class="links">
@@ -23,7 +27,7 @@
       <a href="/bookingspast">Recent Bookings</a>
     </div>
 
-    <CreditsBox amount={10} />
+    <CreditsBox amount={data.users.credits} />
     
   </div >
 

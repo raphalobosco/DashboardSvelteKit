@@ -1,9 +1,11 @@
 <script>
-	import BookingList from "../components/BookingList.svelte";
-	import CreditsBox from "../components/CreditsBox.svelte";
 
-	
+   import CreditsBox from "../components/CreditsBox.svelte";
+  export let data
+
 </script>
+
+<!-- <Content name={name} credits={credits}/> -->
 
 <svelte:head>
 	<title>Home</title>
@@ -11,10 +13,10 @@
 </svelte:head>
 
 <section>
-	<h2>Hello Rapha 👋</h2>
+	<h2>Hello {data.users.name} 👋</h2>
 
             <div class="grid">
-                <CreditsBox amount={10} />
+                <CreditsBox amount={data.users.credits} />
 			</div>
           
             <div class="bookings-list">
@@ -24,7 +26,7 @@
                     <a href="/bookingspast" class="link" >view all (2) </a>
                 </div>
 
-				<BookingList/>
+				<!-- <BookingList/> -->
 
                 
                         <!-- <BookingListPast rest={{ name: restaurant.name, photo: restaurant.photo, date: restaurant.date }} /> -->
@@ -38,10 +40,6 @@
                     <h3 class="title">Recent Bookings </h3>
                     <a href="/bookingsup" class="link" >view all (2) </a>
                 </div>
-                <BookingList/>
+                <!-- <BookingList/> -->
             </div>
 </section>
-
-<style>
-	
-</style>

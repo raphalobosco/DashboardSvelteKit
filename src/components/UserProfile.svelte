@@ -1,7 +1,8 @@
 <script>
+
     export let photo = ''
-    export let name= 'Rapha'
-    export let email= 'rapha@gmail.com'
+    export let name= ''
+    export let email= ''
 
 
 </script>

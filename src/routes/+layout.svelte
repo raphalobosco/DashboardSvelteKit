@@ -1,13 +1,19 @@
 <script>
-	import Sidebar from "./Sidebar.svelte";
+	import Content from "../components/Content.svelte";
+	import Sidebar from "../components/Sidebar.svelte";
 
-
+	export let data
 	
 </script>
 
+<h1>{data.users.name}</h1>
+
+
 <div >
-	<Sidebar/>
-	<slot/>
+<Sidebar {data}/>
+	
+
+		<slot users={data}/>
 </div>
 
 <style>
