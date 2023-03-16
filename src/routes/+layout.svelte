@@ -11,9 +11,8 @@
 
 <div >
 <Sidebar {data}/>
-	
+<slot users={data}/>
 
-		<slot users={data}/>
 </div>
 
 <style>

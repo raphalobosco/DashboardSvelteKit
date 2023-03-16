@@ -22,7 +22,7 @@
 
     <div class="links">
       <a href="/">Dashboard</a>
-      <a href="/account">Profile</a>
+      <a href="/profile">Profile</a>
       <a href="/bookingsup">Upcoming Bookings</a>
       <a href="/bookingspast">Recent Bookings</a>
     </div>

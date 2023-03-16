@@ -1,9 +1,9 @@
 import * as usersData from "../data/data.json"
 
+const e = Math.floor(Math.random()*3);
 
 export async function load() {
-    const e = 3;
     return {
-      users:  usersData.users[Math.floor(Math.random()*e)]
+      users:  usersData.users[e]
     };
   }
